@@ -7,115 +7,132 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <body>
-
-    <img id="imagen" src="https://picsum.photos/300/300" alt="Imagen">
-
-    <script src="script.js">
-
-    </script>
-
     <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<title>Stickers</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío 2 - Condiciones</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<h2>Selecciona tus stickers</h2>
+<header>
 
-<div>
+<h1>Desafío 2 - Condiciones</h1>
 
-<img src="https://picsum.photos/200?1">
-<br>
-<input type="number" id="sticker1" min="0">
+<nav>
+<button onclick="mostrar('parte1')">Parte 1<br>Borde Imagen</button>
+
+<button onclick="mostrar('parte2')">Parte 2<br>Stickers</button>
+
+<button onclick="mostrar('parte3')">Parte 3<br>Password</button>
+</nav>
+
+</header>
+
+<!-- ====================== -->
+<!-- PARTE 1 -->
+<!-- ====================== -->
+
+<section id="parte1" class="seccion">
+
+<h2>Parte 1 - Borde de Imagen</h2>
+
+<img id="imagen" src="assets/img/imagen.jpg" alt="Imagen">
+
+</section>
+
+<!-- ====================== -->
+<!-- PARTE 2 -->
+<!-- ====================== -->
+
+<section id="parte2" class="seccion oculto">
+
+<h2>Parte 2 - Selector de Stickers</h2>
+
+<div class="stickers">
+
+<div class="card">
+<img src="assets/img/sticker1.jpg">
+<input id="sticker1" type="number" min="0" value="0">
+</div>
+
+<div class="card">
+<img src="assets/img/sticker2.jpg">
+<input id="sticker2" type="number" min="0" value="0">
+</div>
+
+<div class="card">
+<img src="assets/img/sticker3.jpg">
+<input id="sticker3" type="number" min="0" value="0">
+</div>
 
 </div>
 
-<div>
+<button id="btnStickers">Verificar</button>
 
-<img src="https://picsum.photos/200?2">
-<br>
-<input type="number" id="sticker2" min="0">
+<p id="resultadoStickers"></p>
 
-</div>
+</section>
 
-<div>
+<!-- ====================== -->
+<!-- PARTE 3 -->
+<!-- ====================== -->
 
-<img src="https://picsum.photos/200?3">
-<br>
-<input type="number" id="sticker3" min="0">
+<section id="parte3" class="seccion oculto">
 
-</div>
+<h2>Parte 3 - Password</h2>
 
-<br>
-
-<button id="verificar">Verificar</button>
-
-<p id="resultado"></p>
-
-<script src="script.js"></script>
-
-</body>
-</html>
-
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<title>Password</title>
-</head>
-<body>
-
-<select id="digito1">
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-<option value="6">6</option>
-<option value="7">7</option>
-<option value="8">8</option>
-<option value="9">9</option>
+<select id="num1">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
 </select>
 
-<select id="digito2">
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-<option value="6">6</option>
-<option value="7">7</option>
-<option value="8">8</option>
-<option value="9">9</option>
+<select id="num2">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
 </select>
 
-<select id="digito3">
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-<option value="6">6</option>
-<option value="7">7</option>
-<option value="8">8</option>
-<option value="9">9</option>
+<select id="num3">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
 </select>
 
 <br><br>
 
-<button id="ingresar">Ingresar</button>
+<button id="btnPassword">Ingresar</button>
 
-<p id="resultado"></p>
+<p id="resultadoPassword"></p>
+
+</section>
 
 <script src="script.js"></script>
 
 </body>
 </html>
-
-
 </body>
 </html>

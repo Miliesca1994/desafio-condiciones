@@ -1,11 +1,138 @@
-body{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
 }
 
-img{
-    width:300px;
-    cursor:pointer;
+body{
+background:#f4f4f4;
+text-align:center;
+}
+
+header{
+background:#222;
+color:white;
+padding:25px;
+}
+
+nav{
+margin-top:20px;
+}
+
+nav button{
+
+padding:15px 25px;
+
+margin:10px;
+
+border:none;
+
+background:#0077ff;
+
+color:white;
+
+cursor:pointer;
+
+border-radius:10px;
+
+font-size:16px;
+}
+
+nav button:hover{
+
+background:#0056b3;
+
+}
+
+.seccion{
+
+padding:40px;
+
+}
+
+.oculto{
+
+display:none;
+
+}
+
+#imagen{
+
+width:350px;
+
+cursor:pointer;
+
+border:2px solid transparent;
+
+transition:.3s;
+
+}
+
+.stickers{
+
+display:flex;
+
+justify-content:center;
+
+gap:40px;
+
+margin:30px;
+
+flex-wrap:wrap;
+
+}
+
+.card{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.card img{
+
+width:200px;
+
+height:200px;
+
+object-fit:cover;
+
+border-radius:10px;
+
+}
+
+.card input{
+
+margin-top:10px;
+
+width:60px;
+
+padding:5px;
+
+text-align:center;
+
+}
+
+button{
+
+padding:10px 20px;
+
+margin-top:20px;
+
+cursor:pointer;
+
+}
+
+p{
+
+margin-top:20px;
+
+font-size:20px;
+
+font-weight:bold;
+
 }

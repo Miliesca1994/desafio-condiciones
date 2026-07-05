@@ -1,55 +1,97 @@
-const imagen = document.getElementById("imagen");
+//=========================
+// Cambiar secciones
+//=========================
 
-imagen.addEventListener("click", function(){
+function mostrar(id){
 
-    if(imagen.style.border === ""){
-        imagen.style.border = "2px solid red";
-    }else{
-        imagen.style.border = "";
-    }
+let secciones=document.querySelectorAll(".seccion");
+
+secciones.forEach(sec=>{
+
+sec.classList.add("oculto");
 
 });
 
-const boton = document.getElementById("verificar");
+document.getElementById(id).classList.remove("oculto");
 
-boton.addEventListener("click", function(){
+}
 
-let sticker1 = Number(document.getElementById("sticker1").value);
-let sticker2 = Number(document.getElementById("sticker2").value);
-let sticker3 = Number(document.getElementById("sticker3").value);
+//=========================
+// Parte 1
+//=========================
 
-let total = sticker1 + sticker2 + sticker3;
+const imagen=document.getElementById("imagen");
 
-const resultado = document.getElementById("resultado");
+imagen.addEventListener("click",()=>{
 
-if(total <= 10){
-    resultado.innerHTML = "Llevas " + total + " stickers";
+if(imagen.style.border=="2px solid red"){
+
+imagen.style.border="2px solid transparent";
+
 }else{
-    resultado.innerHTML = "Llevas demasiados stickers";
+
+imagen.style.border="2px solid red";
+
 }
 
 });
 
-const boton = document.getElementById("ingresar");
+//=========================
+// Parte 2
+//=========================
 
-boton.addEventListener("click", function(){
+document.getElementById("btnStickers").addEventListener("click",()=>{
 
-let digito1 = document.getElementById("digito1").value;
-let digito2 = document.getElementById("digito2").value;
-let digito3 = document.getElementById("digito3").value;
+let s1=Number(document.getElementById("sticker1").value);
 
-let password = digito1 + digito2 + digito3;
+let s2=Number(document.getElementById("sticker2").value);
 
-const resultado = document.getElementById("resultado");
+let s3=Number(document.getElementById("sticker3").value);
 
-if(password === "911"){
-    resultado.innerHTML = "Password 1 correcto";
+let total=s1+s2+s3;
+
+if(total<=10){
+
+document.getElementById("resultadoStickers").innerHTML="Llevas "+total+" stickers";
+
+}else{
+
+document.getElementById("resultadoStickers").innerHTML="Llevas demasiados stickers";
+
 }
-else if(password === "714"){
-    resultado.innerHTML = "Password 2 correcto";
+
+});
+
+//=========================
+// Parte 3
+//=========================
+
+document.getElementById("btnPassword").addEventListener("click",()=>{
+
+let password=
+
+document.getElementById("num1").value+
+
+document.getElementById("num2").value+
+
+document.getElementById("num3").value;
+
+if(password=="911"){
+
+document.getElementById("resultadoPassword").innerHTML="Password 1 correcto";
+
 }
+
+else if(password=="714"){
+
+document.getElementById("resultadoPassword").innerHTML="Password 2 correcto";
+
+}
+
 else{
-    resultado.innerHTML = "Password incorrecto";
+
+document.getElementById("resultadoPassword").innerHTML="Password incorrecto";
+
 }
 
 });
